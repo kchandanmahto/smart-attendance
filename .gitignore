@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables
+.env
+.env.*
+
+# Exceptions
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Node
+node_modules/
+.next/
+out/
+
+# Uploads / generated data
+uploads/
+storage/
+datasets/
+models/
+
+# Temporary
+tmp/
+temp/
