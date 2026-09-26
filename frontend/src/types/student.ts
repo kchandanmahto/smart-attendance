@@ -24,7 +24,6 @@ export interface Student {
     semester: number | null;
 
     profile_photo_url: string | null;
-
     face_enrollment_status: string;
 
     is_active: boolean;
@@ -33,10 +32,8 @@ export interface Student {
     updated_at: string;
 }
 
-
 export interface StudentCreate {
     student_id: string;
-
     department_id: string;
     course_id: string;
     section_id: string;
@@ -57,8 +54,11 @@ export interface StudentCreate {
     semester?: number;
 }
 
-
 export interface StudentUpdate {
+    department_id?: string;
+    course_id?: string;
+    section_id?: string;
+
     roll_number?: string;
     admission_number?: string;
 
@@ -74,7 +74,39 @@ export interface StudentUpdate {
     academic_year?: string;
     semester?: number;
 
-    department_id?: string;
-    course_id?: string;
-    section_id?: string;
+    is_active?: boolean;
+}
+
+export interface Department {
+    id: string;
+    organization_id: string;
+    name: string;
+    code: string;
+    description: string | null;
+    is_active: boolean;
+    created_at: string;
+    updated_at: string;
+}
+
+export interface Course {
+    id: string;
+    organization_id: string;
+    department_id: string;
+    name: string;
+    code: string;
+    duration_years: number | null;
+    is_active: boolean;
+    created_at: string;
+    updated_at: string;
+}
+
+export interface Section {
+    id: string;
+    course_id: string;
+    name: string;
+    academic_year: string;
+    semester: number;
+    is_active: boolean;
+    created_at: string;
+    updated_at: string;
 }
