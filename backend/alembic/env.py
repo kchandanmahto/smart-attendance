@@ -18,8 +18,9 @@ from app.models import (
     Course,
     Section,
     Student,
+    FaceEnrollment,
+    FaceModel,
 )
-
 config = context.config
 
 config.set_main_option(
